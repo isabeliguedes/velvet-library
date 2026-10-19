@@ -1,32 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT Velvet Library</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 <body>
 
-<h2>Basic HTML code for Navbar</h2>
+    <div class="site-container">
+        
+        <main class="main-content">
+            
+           
+            <header class="header">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="VT Logo">
+                </div>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Procurar livro">
+                </div>
+                <div class="auth-buttons">
+                    <button class="btn btn-yellow">Entrar</button>
+                    <button class="btn btn-yellow">Criar conta</button>
+                </div>
+                <div class="header-icons">
+                    <button class="icon-btn cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="icon-btn star-btn"><i class="fa-solid fa-star"></i></button>
+                </div>
+            </header>
 
-<ul>
-  <li><a href="#Início">Início</a></li>
-  <li><a href="#Entrar">Entrar</a></li>
-  <li><a href="#Criar conta">Criar conta</a></li>
-  <li><a href="#Sobre">Sobre</a></li>
-</ul>
+            
+            <section class="banner">
+                <div class="banner-text">
+                    <h2>ATÉ 50% DE DESCONTO</h2>
+                </div>
+                <div class="banner-image">
+                    
+                </div>
+            </section>
 
-<p>Note: We use href="#" for links. In a real website this would be URLs.</p>
+            
+            <div class="row">
+                <section class="card-section purple-box flex-3">
+                    <h3>Favorito dos leitores!</h3>
+                    <div class="books-carousel">
+                        <div class="book-card"><div class="cover"></div><span>$59,90</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$69,90</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$45,00</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$49,90</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$65,00</span></div>
+                        <button class="next-btn">&gt;</button>
+                    </div>
+                </section>
 
-</body>
-</html>
+                <section class="card-section pink-box flex-1 categories-section">
+                    <h3>Categorias</h3>
+                    <div class="pills">
+                        <span class="pill">romance de época</span>
+                        <span class="pill">romance policial</span>
+                        <span class="pill">romance escolar</span>
+                    </div>
+                    <a href="#" class="see-more">VER MAIS &rarr;</a>
+                </section>
+            </div>
 
+            
+            <div class="row">
+                <section class="card-section pink-box flex-1">
+                    <h3>Em oferta <a href="#" class="see-more-inline">VER MAIS &rarr;</a></h3>
+                    <div class="books-carousel">
+                        <div class="book-card"><div class="cover"></div><span>$65,00</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$59,90</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$69,90</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$59,90</span></div>
+                        <button class="next-btn">&gt;</button>
+                    </div>
+                </section>
 
-<!DOCTYPE html>
-<html>
-<body>
+                <section class="card-section pink-box flex-1">
+                    <h3>Mangás de romance <a href="#" class="see-more-inline">VER MAIS &rarr;</a></h3>
+                    <div class="books-carousel">
+                        <div class="book-card"><div class="cover"></div><span>$45,00</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$49,90</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$68,00</span></div>
+                        <div class="book-card"><div class="cover"></div><span>$79,90</span></div>
+                        <button class="next-btn">&gt;</button>
+                    </div>
+                </section>
+            </div>
 
-<h1>The footer element</h1>
+            
+            <div class="row">
+                <section class="sub-section flex-1">
+                    <h4>ROMANCES INTERNACIONAIS</h4>
+                    <div class="yellow-box">
+                        <ul>
+                            <li>🌸 romance mexicano</li>
+                            <li>🌹 romance americano</li>
+                            <li>🌸 romance japonês</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="see-more bold">VER MAIS &rarr;</a>
+                </section>
 
-<footer>
-  <p>Author: Hege Refsnes<br>
-  <a href="velvetlibrary@gmail.com">hvelvetlibrary@gmail.com</a></p>
-</footer>
+                <section class="sub-section flex-1 social-section">
+                    <h4>redes sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </section>
+            </div>
 
+        </main>
+
+        
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="#">Filtrar</a></li>
+                    <li><a href="#">conta</a></li>
+                    <li><a href="#">configurações</a></li>
+                    <li><a href="#">formas de pagamento</a></li>
+                    <li><a href="#">ajuda</a></li>
+                    <li><a href="#">sair</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-banner">
+               
+            </div>
+
+            <footer class="sidebar-footer">
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                </ul>
+            </footer>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
