@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VT Velvet Library</title>
     <link rel="stylesheet" href="./css/style.css">
-   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
 
-
-
     <div class="site-container">
        
+        <!-- Conteúdo Principal -->
         <main class="main-content">
            
-           
+            <!-- Cabeçalho -->
             <header class="header">
                 <div class="logo">
                     <img src="./imagens/logo.png" alt="VT Logo">
@@ -37,62 +35,42 @@
             </header>
 
 
-
-
-           
+            <!-- Banner Promocional -->
             <section class="banner">
                 <div class="banner-text">
                     <h2>ATÉ 50% DE DESCONTO</h2>
                 </div>
-                <div class="banner-image">
-                   
-                </div>
             </section>
 
 
-
-
-           
-            <section class="card-section purple-box flex-3">
-    <h3>Favorito dos leitores!</h3>
-    <div class="books-carousel">
-
-
-        <div class="book-card">
-            <div class="cover"><img src="./imagens/jogandoporamor.jpg" alt="Jogando por Amor"></div>
-            <span>$59,90</span>
-        </div>
-
-
-        <div class="book-card">
-            <div class="cover"><img src="./imagens/img.jpg" alt="Orgulho e Preconceito"></div>
-            <span>$69,90</span>
-        </div>
-
-
-        <div class="book-card">
-            <div class="cover"><img src="./imagens/imagens.jpg" alt="Amor, Teoricamente"></div>
-            <span>$45,00</span>
-        </div>
-
-
-        <div class="book-card">
-            <div class="cover"><img src="./imagens/imagess.jpg" alt="Jogo de Amor Para Dois"></div>
-            <span>$49,90</span>
-        </div>
-
-
-        <div class="book-card">
-            <div class="cover"><img src="./imagens/imagen.jpg" alt="A Hipótese do Amor"></div>
-            <span>$65,00</span>
-        </div>
-
-
-        <button class="next-btn">&gt;</button>
-    </div>
-</section>
-
-
+            <!-- Linha 1: Favoritos + Categorias -->
+            <div class="row">
+                <section class="card-section purple-box flex-3">
+                    <h3>Favorito dos leitores!</h3>
+                    <div class="books-carousel">
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/jogandoimagem.jpg" alt="Jogando por Amor"></div>
+                            <span>$59,90</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/orgulhoimagem.jpg" alt="Orgulho e Preconceito"></div>
+                            <span>$69,90</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/imagens.jpg" alt="Amor, Teoricamente"></div>
+                            <span>$45,00</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/paradoisimagem.jpg" alt="Jogo de Amor Para Dois"></div>
+                            <span>$49,90</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/imagen.jpg" alt="A Hipótese do Amor"></div>
+                            <span>$65,00</span>
+                        </div>
+                        <button class="next-btn">&gt;</button>
+                    </div>
+                </section>
 
 
                 <section class="card-section pink-box flex-1 categories-section">
@@ -102,46 +80,70 @@
                         <span class="pill">romance policial</span>
                         <span class="pill">romance escolar</span>
                     </div>
-                    <a href="#" class="see-more">VER MAIS &rarr;</a>
+                    <a href="#" class="see-more-btn">VER MAIS &rarr;</a>
                 </section>
             </div>
 
 
-
-
-           
+            <!-- Linha 2: Em Oferta + Mangás de Romance -->
             <div class="row">
                 <section class="card-section pink-box flex-1">
-                    <h3>Em oferta <a href="#" class="see-more-inline">VER MAIS &rarr;</a></h3>
+                    <div class="section-header">
+                        <h3>Em oferta</h3>
+                        <a href="#" class="see-more-inline">VER MAIS &rarr;</a>
+                    </div>
                     <div class="books-carousel">
-                        <div class="book-card"><div class="cover"></div><span>$65,00</span></div>
-                        <div class="book-card"><div class="cover"></div><span>$59,90</span></div>
-                        <div class="book-card"><div class="cover"></div><span>$69,90</span></div>
-                        <div class="book-card"><div class="cover"></div><span>$59,90</span></div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/ventosimg.jpg" alt="O Morro dos Ventos Uivantes"></div>
+                            <span>$65,00</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/mlhrimg.jpg" alt="Melhor do que nos filmes"></div>
+                            <span>$59,90</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/acabaimg.jpg" alt="É assim que acaba"></div>
+                            <span>$69,90</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/bibliotecaimg.jpg" alt="A biblioteca da meia-noite"></div>
+                            <span>$59,90</span>
+                        </div>
                         <button class="next-btn">&gt;</button>
                     </div>
                 </section>
 
 
-
-
                 <section class="card-section pink-box flex-1">
-                    <h3>Mangás de romance <a href="#" class="see-more-inline">VER MAIS &rarr;</a></h3>
+                    <div class="section-header">
+                        <h3>Mangás de romance</h3>
+                        <a href="#" class="see-more-inline">VER MAIS &rarr;</a>
+                    </div>
                     <div class="books-carousel">
-                        <div class="book-card"><div class="cover"></div><span>$45,00</span></div>
-                        <div class="book-card"><div class="cover"></div><span>$49,90</span></div>
-                        <div class="book-card"><div class="cover"></div><span>$68,00</span></div>
-                        <div class="book-card"><div class="cover"></div><span>$79,90</span></div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/horymia.jpg" alt="Horimiya"></div>
+                            <span>$45,00</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/nanaimg.jpg" alt="Nana"></div>
+                            <span>$49,90</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/kissimg.jpg" alt="Kamisama Kiss"></div>
+                            <span>$68,00</span>
+                        </div>
+                        <div class="book-card">
+                            <div class="cover"><img src="./imagens/todokeimg.jpg" alt="Kimi ni Todoke"></div>
+                            <span>$79,90</span>
+                        </div>
                         <button class="next-btn">&gt;</button>
                     </div>
                 </section>
             </div>
 
 
-
-
-           
-            <div class="row">
+            <!-- Linha 3: Romances Internacionais + Redes Sociais + Footer da Direita -->
+            <div class="row bottom-row">
                 <section class="sub-section flex-1">
                     <h4>ROMANCES INTERNACIONAIS</h4>
                     <div class="yellow-box">
@@ -155,8 +157,6 @@
                 </section>
 
 
-
-
                 <section class="sub-section flex-1 social-section">
                     <h4>redes sociais</h4>
                     <div class="social-icons">
@@ -164,17 +164,24 @@
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </section>
+
+
+                <!-- Footer do rodapé alinhado à direita conforme o print -->
+                <footer class="bottom-footer flex-1">
+                    <ul>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                    </ul>
+                </footer>
             </div>
-
-
 
 
         </main>
 
 
-
-
-       
+        <!-- Barra Lateral Direita -->
         <aside class="sidebar">
             <nav class="sidebar-menu">
                 <ul>
@@ -188,27 +195,13 @@
             </nav>
 
 
-
-
             <div class="sidebar-banner">
-               
+                <img src="./imagens/sidebar-banner.jpg" alt="Bookstore Romance Day">
             </div>
-
-
-
-
-            <footer class="sidebar-footer">
-                <ul>
-                    <li><a href="#">Sobre nós</a></li>
-                    <li><a href="#">Termos de uso</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Política de privacidade</a></li>
-                </ul>
-            </footer>
         </aside>
+
+
     </div>
-
-
 
 
     <script src="script.js"></script>

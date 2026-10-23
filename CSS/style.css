@@ -1,11 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    background-color:  #f7b2e0; /* fundo rosa */
+
+
+body {
+    background-color: #f7b2e0; /* Fundo rosa claro */
     color: #333;
 }
 
@@ -14,67 +16,66 @@ body{
     display: flex;
     max-width: 1440px;
     margin: 0 auto;
-
-
 }
+
+
 .main-content {
     flex: 3;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
-
+    gap: 15px;
 }
 
 
-.hearder{
+/* Header */
+.header {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
 
-.logo img{
+.logo img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-
-
 }
 
 
 .search-bar {
-    background-color:  #a83fa7;
+    background-color: #a83fa7;
     border-radius: 20px;
     padding: 8px 15px;
     display: flex;
     align-items: center;
     gap: 10px;
     flex: 1;
-
-
 }
 
 
-.search-bar input{
+.search-bar input {
     border: none;
     background: transparent;
     color: white;
     outline: none;
     width: 100%;
-
-
 }
 
 
-.search-bar input::placeholder{
+.search-bar input::placeholder {
     color: #e0d0e0;
 }
 
 
-.search-bar i{
+.search-bar i {
     color: white;
+}
+
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
 }
 
 
@@ -101,12 +102,14 @@ body{
     height: 40px;
     cursor: pointer;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
- 
+
+
 .cart-btn { background-color: #e65287; color: white; }
 .star-btn { background-color: #fce879; color: #e65287; }
-
-
 
 
 /* Banner Promocional */
@@ -119,74 +122,90 @@ body{
     padding: 20px;
     color: black;
     font-weight: bold;
+    background-image: url('../imagens/banner.png');
+    background-size: cover;
+    background-position: center;
 }
 
 
+.banner-text h2 {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 5px 10px;
+}
 
 
-/* Estrutura de Linhas e Caixas */
+/* Estrutura de Linhas e Flexbox */
 .row {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    align-items: stretch;
 }
-
-
 
 
 .flex-1 { flex: 1; }
 .flex-3 { flex: 3; }
 
 
-
-
+/* 1. Aumenta a altura dos cards roxos/rosas (fundo) e dá espaço aos livros */
+/* 1. Aumenta mais a altura do fundo (caixa rosa/roxa) */
+/* --- FUNDOS E CAIXAS --- */
 .card-section {
-    padding: 15px;
+    padding: 20px;
     border-radius: 12px;
+    position: relative;
+    overflow: hidden;
 }
 
-
-
-
+/* Restaura o fundo Roxo */
 .purple-box {
     background-color: #7b1fa2;
     color: white;
 }
 
-
+/* Restaura o fundo Rosa Escuro */
 .pink-box {
     background-color: #c2185b;
     color: white;
 }
 
-
-/* Organiza os cards lado a lado na horizontal */
+/* --- CARROSSEL E LIVROS MAIORES --- */
 .books-carousel {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     margin-top: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-right: 50px; /* Espaço para o botão não ficar em cima do último livro */
+    width: 100%;
+
+    /* Esconde as barras de rolagem cinzas */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
+.books-carousel::-webkit-scrollbar {
+    display: none;
+}
 
 .book-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 0; /* Impede os livros de encolherem */
 }
 
-
-/* Controla o tamanho exato do retângulo da capa */
+/* Aumenta as capas dos livros com enquadramento perfeito */
 .book-card .cover {
-    width: 120px;
-    height: 170px;
-    border-radius: 4px;
+    width: 110px;  /* Aumentado */
+    height: 160px; /* Aumentado */
+    border-radius: 6px;
     overflow: hidden;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Força a imagem a preencher a caixa sem quebrar nem esticar */
 .book-card .cover img {
     width: 100%;
     height: 100%;
@@ -194,26 +213,36 @@ body{
     display: block;
 }
 
-
-/* Preço centralizado abaixo da imagem */
 .book-card span {
     font-size: 1rem;
     font-weight: bold;
     color: #fff;
 }
 
-
+/* --- BOTÃO ROSA DE AVANÇAR --- */
 .next-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #ff80ab;
-    border: none;
+    border: 2px solid #fff;
     color: white;
-    width: 35px;         /* Botão um pouco maior para combinar com o print */
-    height: 35px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1.1rem;
-    flex-shrink: 0;
+    font-size: 1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.next-btn:hover {
+    background-color: #ff4081;
 }
 
 
@@ -222,9 +251,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
-
-
 
 
 .pills {
@@ -237,42 +266,44 @@ body{
 
 
 .pill {
-    background-color: #9c27b0;
+    background-color: #7b1fa2;
+    color: white;
     padding: 6px 12px;
     border-radius: 15px;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 
-
-
-.see-more {
+.see-more-btn {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    margin-top: auto;
+    font-size: 1rem;
 }
-
-
 
 
 .see-more-inline {
     font-size: 0.8rem;
     color: white;
-    float: right;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 
 /* Seção Inferior */
+.sub-section h4 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+
 .yellow-box {
     background-color: #fce879;
     padding: 15px;
     border-radius: 8px;
-    margin: 10px 0;
+    margin-bottom: 5px;
 }
-
-
 
 
 .yellow-box ul {
@@ -280,13 +311,28 @@ body{
 }
 
 
+.yellow-box li {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.see-more {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+
+/* Redes Sociais */
 .social-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-
-
 
 
 .social-icons {
@@ -297,32 +343,50 @@ body{
 }
 
 
-
-
 .social-icons a { color: #e65287; }
 
 
+/* Rodapé no Canto Inferior */
+.bottom-footer {
+    background-color: #880e4f;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
 
 
-/* Barra Lateral */
+.bottom-footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+
+.bottom-footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+/* Barra Lateral Amarela (Direita) */
 .sidebar {
     flex: 1;
+    max-width: 320px;
     background-color: #fce879;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
 }
-
-
 
 
 .sidebar-menu ul {
     list-style: none;
-    padding: 30px;
+    padding: 30px 20px;
 }
-
-
 
 
 .sidebar-menu li {
@@ -330,44 +394,22 @@ body{
 }
 
 
-
-
 .sidebar-menu a {
     text-decoration: none;
     color: black;
     font-size: 1.1rem;
+    font-weight: bold;
 }
-
-
 
 
 .sidebar-banner {
-    background-color: #fff;
-    height: 300px;
-    margin: 0 15px;
+    padding: 10px;
 }
 
 
-
-
-.sidebar-footer {
-    background-color: #880e4f;
-    padding: 20px;
-}
-
-
-
-
-.sidebar-footer ul {
-    list-style: none;
-}
-
-
-
-
-.sidebar-footer a {
-    color: white;
-    text-decoration: none;
+.sidebar-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
     display: block;
-    margin-bottom: 10px;
 }
