@@ -7,8 +7,8 @@
 
 
 body {
-    background-color: #f7b2e0; /* Fundo rosa claro */
-    color: #333;
+    background-color: #ac4168; /* Fundo rosa claro */
+    color: #000000;
 }
 
 
@@ -32,7 +32,9 @@ body {
 .header {
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
 }
 
 
@@ -40,86 +42,19 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 
-.search-bar {
-    background-color: #a83fa7;
-    border-radius: 20px;
-    padding: 8px 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.banner {
     flex: 1;
-}
-
-
-.search-bar input {
-    border: none;
-    background: transparent;
-    color: white;
-    outline: none;
-    width: 100%;
-}
-
-
-.search-bar input::placeholder {
-    color: #e0d0e0;
-}
-
-
-.search-bar i {
-    color: white;
-}
-
-
-.auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-
-.btn-yellow {
-    background-color: #fce879;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
-.header-icons {
-    display: flex;
-    gap: 10px;
-}
-
-
-.icon-btn {
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 1.2rem;
+    background-color: #d3b764;
+    height: 80px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-
-.cart-btn { background-color: #e65287; color: white; }
-.star-btn { background-color: #fce879; color: #e65287; }
-
-
-/* Banner Promocional */
-.banner {
-    background-color: #f061a2;
-    height: 120px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
     color: black;
     font-weight: bold;
     background-image: url('../imagens/banner.png');
@@ -129,9 +64,36 @@ body {
 
 
 .banner-text h2 {
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 5px 10px;
+    background-color: rgb(74, 70, 70);
+    padding: 5px 15px;
+    border-radius: 6px;
+    margin: 0;
+    white-space: nowrap;
 }
+
+
+.header-icons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+.icon-btn {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cart-btn { background-color: #741226; color: white; }
+.star-btn { background-color: #f1dfab; color: #741226; }
 
 
 /* Estrutura de Linhas e Flexbox */
@@ -139,6 +101,8 @@ body {
     display: flex;
     gap: 15px;
     align-items: stretch;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
@@ -146,65 +110,64 @@ body {
 .flex-3 { flex: 3; }
 
 
-/* 1. Aumenta a altura dos cards roxos/rosas (fundo) e dá espaço aos livros */
-/* 1. Aumenta mais a altura do fundo (caixa rosa/roxa) */
-/* --- FUNDOS E CAIXAS --- */
 .card-section {
-    padding: 20px;
+    padding: 15px;
     border-radius: 12px;
     position: relative;
-    overflow: hidden;
 }
 
-/* Restaura o fundo Roxo */
+
 .purple-box {
-    background-color: #7b1fa2;
+    background-color: #943145;
     color: white;
 }
 
-/* Restaura o fundo Rosa Escuro */
+
 .pink-box {
-    background-color: #c2185b;
+    background-color: #a03f5f;
     color: white;
 }
 
-/* --- CARROSSEL E LIVROS MAIORES --- */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Carrossel de Livros */
+.carousel {
+    position: relative;
+    width: 100%;
+}
+
+
 .books-carousel {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    gap: 15px;
-    margin-top: 15px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-right: 50px; /* Espaço para o botão não ficar em cima do último livro */
-    width: 100%;
-
-    /* Esconde as barras de rolagem cinzas */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding-right: 40px; /* Garante espaço para o botão de próximo */
 }
 
-.books-carousel::-webkit-scrollbar {
-    display: none;
-}
 
 .book-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-shrink: 0; /* Impede os livros de encolherem */
 }
 
-/* Aumenta as capas dos livros com enquadramento perfeito */
+
 .book-card .cover {
-    width: 110px;  /* Aumentado */
-    height: 160px; /* Aumentado */
-    border-radius: 6px;
+    width: 90px;
+    height: 130px;
+    border-radius: 4px;
     overflow: hidden;
-    margin-bottom: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
 }
+
 
 .book-card .cover img {
     width: 100%;
@@ -213,36 +176,40 @@ body {
     display: block;
 }
 
+
 .book-card span {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: #fff;
 }
 
-/* --- BOTÃO ROSA DE AVANÇAR --- */
+
+/* Ajuste do Botão do Carrossel (Seta Rosa) */
 .next-btn {
     position: absolute;
-    right: 12px;
     top: 50%;
+    right: 0px;
     transform: translateY(-50%);
-    background-color: #ff80ab;
-    border: 2px solid #fff;
-    color: white;
+    background-color: #c50042d7 !important;
+    border: none;
+    color: white !important;
     width: 32px;
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1rem;
-    z-index: 10;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 1 !important;
+    text-decoration: none !important;
+    z-index: 5;
 }
 
+
 .next-btn:hover {
-    background-color: #ff4081;
+    background-color: #8d0535 !important;
 }
 
 
@@ -266,7 +233,7 @@ body {
 
 
 .pill {
-    background-color: #7b1fa2;
+    background-color: #f1dfab;
     color: white;
     padding: 6px 12px;
     border-radius: 15px;
@@ -299,7 +266,7 @@ body {
 
 
 .yellow-box {
-    background-color: #fce879;
+    background-color: #f1dfab;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 5px;
@@ -343,12 +310,12 @@ body {
 }
 
 
-.social-icons a { color: #e65287; }
+.social-icons a { color: #a1073d; }
 
 
-/* Rodapé no Canto Inferior */
+/* Rodapé */
 .bottom-footer {
-    background-color: #880e4f;
+    background-color: #521524;
     padding: 15px;
     border-radius: 8px;
     display: flex;
@@ -372,11 +339,18 @@ body {
 }
 
 
-/* Barra Lateral Amarela (Direita) */
+/* Barra Lateral Amarela */
 .sidebar {
-    flex: 1;
-    max-width: 320px;
-    background-color: #fce879;
+    position: static;
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #f1dfab;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -403,13 +377,15 @@ body {
 
 
 .sidebar-banner {
-    padding: 10px;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 
 .sidebar-banner img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
     display: block;
 }
+

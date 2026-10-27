@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+
+
     // Funcionalidade de deslocamento suave para todos os carrosséis de livros
     const nextButtons = document.querySelectorAll('.next-btn');
     nextButtons.forEach((btn) => {
@@ -25,9 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+
     // Botões do cabeçalho (Entrar e Criar Conta)
     const btnEntrar = document.querySelectorAll('.btn-yellow')[0];
     const btnCriarConta = document.querySelectorAll('.btn-yellow')[1];
+
+
 
 
     if (btnEntrar) {
@@ -37,11 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+
+
     if (btnCriarConta) {
         btnCriarConta.addEventListener('click', () => {
             alert('A abrir ecrã de registo');
         });
     }
+
+
 
 
     // Filtros por categorias (Pills e lista amarela)
@@ -55,9 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+
     // Ícones do carrinho e favoritos
     const cartBtn = document.querySelector('.cart-btn');
     const starBtn = document.querySelector('.star-btn');
+
+
 
 
     if (cartBtn) {
@@ -67,9 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+
+
     if (starBtn) {
         starBtn.addEventListener('click', () => {
             alert('A abrir lista de favoritos...');
         });
     }
 });
+
+
