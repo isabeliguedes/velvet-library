@@ -7,8 +7,8 @@
 
 
 body {
-    background-color: #ac4168; /* Fundo rosa claro */
-    color: #000000;
+    background-color: #FFE8D6;
+    color: #48272A;
 }
 
 
@@ -28,58 +28,85 @@ body {
 }
 
 
-/* Header */
-.header {
+/* Header Promocional Integrado */
+.header-promocional {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-}
-
-
-.logo img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-
-.banner {
-    flex: 1;
-    background-color: #d3b764;
-    height: 80px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    color: black;
-    font-weight: bold;
+    background-color: #741D2B;
     background-image: url('../imagens/banner.png');
     background-size: cover;
     background-position: center;
+    padding: 15px 25px;
+    border-radius: 12px;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(72, 39, 42, 0.2);
 }
 
 
-.banner-text h2 {
-    background-color: rgb(74, 70, 70);
-    padding: 5px 15px;
-    border-radius: 6px;
-    margin: 0;
-    white-space: nowrap;
+/* Logo Circular e Grande */
+.logo-container .logo-circulo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #F7D5D7;
+    box-shadow: 0 4px 8px rgba(72, 39, 42, 0.3);
+    display: block;
 }
 
 
-.header-icons {
+/* Área de Texto Promocional */
+.banner-desconto {
+    flex: 1;
     display: flex;
-    gap: 10px;
-    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.icon-btn {
+.banner-desconto h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #741D2B;
+    background-color: rgba(255, 232, 214, 0.95);
+    padding: 10px 25px;
+    border-radius: 8px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+/* Grupo de Botões à Direita */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.header-actions .btn-yellow {
+    background-color: #F7D5D7;
+    color: #48272A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+
+.header-actions .btn-yellow:hover {
+    transform: scale(1.05);
+    background-color: #E9A0A8;
+}
+
+
+.header-actions .icon-btn {
     border: none;
     border-radius: 50%;
     width: 45px;
@@ -89,20 +116,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s ease;
 }
 
 
-.cart-btn { background-color: #741226; color: white; }
-.star-btn { background-color: #f1dfab; color: #741226; }
+.header-actions .icon-btn:hover {
+    transform: scale(1.1);
+}
 
 
-/* Estrutura de Linhas e Flexbox */
+.header-actions .cart-btn { background-color: #B52332; color: #FFFFFF; }
+.header-actions .star-btn { background-color: #F7D5D7; color: #741D2B; }
+
+
+/* Flexbox Layout */
 .row {
     display: flex;
     gap: 15px;
     align-items: stretch;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 
@@ -113,43 +144,27 @@ body {
 .card-section {
     padding: 15px;
     border-radius: 12px;
-    position: relative;
 }
 
 
 .purple-box {
-    background-color: #943145;
-    color: white;
+    background-color: #741D2B;
+    color: #FFFFFF;
 }
 
 
 .pink-box {
-    background-color: #a03f5f;
-    color: white;
+    background-color: #E9A0A8;
+    color: #48272A;
 }
 
 
-.section-header {
+/* ESTILOS DOS LIVROS E CARROSSEL */
+.books-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-}
-
-
-/* Carrossel de Livros */
-.carousel {
-    position: relative;
-    width: 100%;
-}
-
-
-.books-carousel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    margin-top: 10px;
-    padding-right: 40px; /* Garante espaço para o botão de próximo */
+    padding: 10px 35px;
 }
 
 
@@ -157,15 +172,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+
+.book-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    filter: brightness(1.1);
 }
 
 
 .book-card .cover {
-    width: 90px;
-    height: 130px;
-    border-radius: 4px;
+    width: 140px;
+    height: 210px;
+    border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    box-shadow: 0 6px 12px rgba(72, 39, 42, 0.35);
 }
 
 
@@ -178,39 +202,34 @@ body {
 
 
 .book-card span {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
-    color: #fff;
+    color: #48272A;
 }
 
 
-/* Ajuste do Botão do Carrossel (Seta Rosa) */
-.next-btn {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    transform: translateY(-50%);
-    background-color: #c50042d7 !important;
-    border: none;
-    color: white !important;
-    width: 32px;
-    height: 32px;
+/* Botões do Carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(116, 29, 43, 0.8);
     border-radius: 50%;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1 !important;
-    text-decoration: none !important;
-    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
 }
 
 
-.next-btn:hover {
-    background-color: #8d0535 !important;
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background-color: #B52332;
 }
+
+
+.carousel-control-prev { left: -5px; }
+.carousel-control-next { right: -5px; }
 
 
 /* Categorias */
@@ -233,8 +252,8 @@ body {
 
 
 .pill {
-    background-color: #f1dfab;
-    color: white;
+    background-color: #741D2B;
+    color: #FFFFFF;
     padding: 6px 12px;
     border-radius: 15px;
     text-align: center;
@@ -242,58 +261,32 @@ body {
 }
 
 
-.see-more-btn {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-
-.see-more-inline {
-    font-size: 0.8rem;
-    color: white;
+.see-more-btn, .see-more-inline, .see-more {
+    color: #B52332;
     text-decoration: none;
     font-weight: bold;
 }
+
+
+.see-more-inline { color: #FFFFFF; }
 
 
 /* Seção Inferior */
-.sub-section h4 {
-    text-align: center;
-    margin-bottom: 8px;
-}
+.sub-section h4 { text-align: center; margin-bottom: 8px; }
 
 
 .yellow-box {
-    background-color: #f1dfab;
+    background-color: #F7D5D7;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 5px;
 }
 
 
-.yellow-box ul {
-    list-style: none;
-}
+.yellow-box ul { list-style: none; }
+.yellow-box li { margin-bottom: 5px; font-weight: bold; }
 
 
-.yellow-box li {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-
-.see-more {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    text-align: center;
-}
-
-
-/* Redes Sociais */
 .social-section {
     display: flex;
     flex-direction: column;
@@ -310,12 +303,11 @@ body {
 }
 
 
-.social-icons a { color: #a1073d; }
+.social-icons a { color: #B52332; }
 
 
-/* Rodapé */
 .bottom-footer {
-    background-color: #521524;
+    background-color: #48272A;
     padding: 15px;
     border-radius: 8px;
     display: flex;
@@ -332,60 +324,108 @@ body {
 
 
 .bottom-footer a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.9rem;
 }
 
 
-/* Barra Lateral Amarela */
+/* Sidebar */
 .sidebar {
     position: static;
     width: 260px;
     flex-shrink: 0;
-    background-color: #f1dfab;
+    background-color: #eefc9e;
     border-radius: 16px;
     overflow: hidden;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin: 20px 20px 20px 0;
+    box-shadow: 0 4px 15px rgba(72, 39, 42, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 
-.sidebar-menu ul {
-    list-style: none;
-    padding: 30px 20px;
+.sidebar-menu ul { list-style: none; padding: 30px 20px; }
+.sidebar-menu li { margin-bottom: 15px; }
+.sidebar-menu a { text-decoration: none; color: #48272A; font-size: 1.1rem; font-weight: bold; }
+
+
+.sidebar-banner { width: 100%; height: 100%; overflow: hidden; }
+.sidebar-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+
+/* MODAL PERSONALIZADA */
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(72, 39, 42, 0.8);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
 }
 
 
-.sidebar-menu li {
-    margin-bottom: 15px;
+.custom-modal-content {
+    background-color: #FFE8D6;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 650px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(72, 39, 42, 0.5);
+    animation: fadeIn 0.3s ease;
 }
 
 
-.sidebar-menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.1rem;
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+.custom-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
     font-weight: bold;
+    color: #48272A;
+    cursor: pointer;
 }
 
 
-.sidebar-banner {
-    padding: 0;
-    width: 100%;
-    overflow: hidden;
+.custom-modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 
-.sidebar-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
+.modal-left img {
+    width: 160px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(72, 39, 42, 0.35);
 }
 
+
+.modal-right {
+    flex: 1;
+    color: #48272A;
+}
+
+
+.modal-right h2 { margin-bottom: 5px; color: #B52332; font-size: 1.5rem; }
+.author-text { font-weight: bold; color: #80575A; margin-bottom: 8px; }
+.stars-container { color: #B88632; font-size: 1.2rem; margin-bottom: 10px; }
+.price-text { color: #B52332; font-size: 1.4rem; margin-bottom: 15px; }
+.modal-right h4 { font-size: 1rem; margin-bottom: 5px; color: #48272A; }
+.synopsis-text { font-size: 0.95rem; line-height: 1.4; color: #654649; }

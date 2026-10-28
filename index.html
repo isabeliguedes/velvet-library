@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VT Velvet Library</title>
-   
-    <!-- Bootstrap 4 CSS (Necessário para o Carrossel funcionar) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-   
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Bootstrap CSS para grid e carrossel -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -19,89 +17,118 @@
         <!-- Conteúdo Principal -->
         <main class="main-content">
            
-            <!-- Cabeçalho (Logo + Banner + Ícones em linha) -->
-            <header class="header">
-                <div class="logo">
-                    <img src="./imagens/logo.png" alt="VT Logo">
+            <!-- Cabeçalho / Banner Promocional Integrado -->
+            <header class="header-promocional">
+                <!-- Logo Grande e Circular -->
+                <div class="logo-container">
+                    <img src="./imagens/logoimg.jpg.png" alt="VT Logo" class="logo-circulo">
                 </div>
 
 
-                <div class="banner">
-                    <div class="banner-text">
-                        <h2>ATÉ 50% DE DESCONTO</h2>
-                    </div>
+                <!-- Banner Central: 50% de Desconto -->
+                <div class="banner-desconto">
+                    <h2>ATÉ 50% DE DESCONTO</h2>
                 </div>
 
 
-                <div class="header-icons">
-                    <button class="icon-btn cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <button class="icon-btn star-btn"><i class="fa-solid fa-star"></i></button>
+                <!-- Botões da Direita -->
+                <div class="header-actions">
+                    <button class="btn btn-yellow">Criar conta</button>
+                    <button class="icon-btn cart-btn" aria-label="Carrinho de compras">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                    <button class="icon-btn star-btn" aria-label="Favoritos">
+                        <i class="fa-solid fa-star"></i>
+                    </button>
                 </div>
             </header>
 
 
             <!-- Linha 1: Favoritos + Categorias -->
-            <div class="row">
+            <div class="row g-3">
                 <section class="card-section purple-box flex-3">
                     <h3>Favorito dos leitores!</h3>
                    
-                    <!-- CARROSSEL 1: FAVORITOS -->
-                    <div id="carouselFavoritos" class="carousel slide" data-ride="carousel">
+                    <!-- Carrossel 1 (Favoritos) -->
+                    <div id="carouselFavoritos" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
-                           
-                            <!-- Slide 1 -->
+                            <!-- Pagina 1 (3 livros) -->
                             <div class="carousel-item active">
-                                <div class="books-carousel">
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/jogando.jpg" alt="Jogando por Amor"></div>
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="Jogando por Amor"
+                                         data-author="S. J. Hook"
+                                         data-stars="5"
+                                         data-price="$59,90"
+                                         data-cover="./imagens/jogandoimagem.jpg"
+                                         data-synopsis="Um romance empolgante que envolve paixão, rivalidades e superação dentro e fora dos campos. Uma história inesquecível sobre escolhas e redenção.">
+                                        <div class="cover"><img src="./imagens/jogandoimagem.jpg" alt="Jogando por Amor"></div>
                                         <span>$59,90</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/orgulho.jpg" alt="Orgulho e Preconceito"></div>
+                                    <div class="book-card"
+                                         data-title="Orgulho e Preconceito"
+                                         data-author="Jane Austen"
+                                         data-stars="5"
+                                         data-price="$69,90"
+                                         data-cover="./imagens/orgulhoimagem.jpg"
+                                         data-synopsis="O clássico atemporal que acompanha as atribulações do relacionamento entre Elizabeth Bennet e Fitzwilliam Darcy na Inglaterra do século XIX.">
+                                        <div class="cover"><img src="./imagens/orgulhoimagem.jpg" alt="Orgulho e Preconceito"></div>
                                         <span>$69,90</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/amor.jpg" alt="Amor, Teoricamente"></div>
+                                    <div class="book-card"
+                                         data-title="Amor, Teoricamente"
+                                         data-author="Ali Hazelwood"
+                                         data-stars="4"
+                                         data-price="$45,00"
+                                         data-cover="./imagens/amor.jpg"
+                                         data-synopsis="Duas mentes brilhantes da física entram em rota de colisão ao tentarem equilibrar rivalidades acadêmicas com desejos totalmente imprevisíveis.">
+                                        <div class="cover"><img src="./imagens/imagens.jpg" alt="Amor, Teoricamente"></div>
                                         <span>$45,00</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/paradois.jpg" alt="Jogo de Amor Para Dois"></div>
+                                </div>
+                            </div>
+                            <!-- Pagina 2 (3 livros) -->
+                            <div class="carousel-item">
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="Jogo de Amor Para Dois"
+                                         data-author="Vi Keeland"
+                                         data-stars="4"
+                                         data-price="$49,90"
+                                         data-cover="./imagens/paradoisimagem.jpg"
+                                         data-synopsis="Uma comédia romântica envolvente e cheia de provocações onde as regras do jogo mudam quando o coração entra em disputa.">
+                                        <div class="cover"><img src="./imagens/paradoisimagem.jpg" alt="Jogo de Amor Para Dois"></div>
                                         <span>$49,90</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/hipotese.jpg" alt="A Hipótese do Amor"></div>
+                                    <div class="book-card"
+                                         data-title="A Hipótese do Amor"
+                                         data-author="Ali Hazelwood"
+                                         data-stars="5"
+                                         data-price="$65,00"
+                                         data-cover="./imagens/imagen.jpg"
+                                         data-synopsis="Um namoro de mentira entre dois cientistas gera sentimentos inesperados, desafiando todas as leis e teorias da física.">
+                                        <div class="cover"><img src="./imagens/imagen.jpg" alt="A Hipótese do Amor"></div>
                                         <span>$65,00</span>
                                     </div>
-                                </div>
-                            </div>
-
-
-                            <!-- Slide 2 (Exemplo de novos livros ao passar a página) -->
-                            <div class="carousel-item">
-                                <div class="books-carousel">
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/jogando.jpg" alt="Livro Extra 1"></div>
-                                        <span>$55,00</span>
-                                    </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/orgulho.jpg" alt="Livro Extra 2"></div>
-                                        <span>$62,00</span>
-                                    </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/amor.jpg" alt="Livro Extra 3"></div>
-                                        <span>$48,00</span>
+                                    <div class="book-card"
+                                         data-title="É Assim Que Acaba"
+                                         data-author="Colleen Hoover"
+                                         data-stars="5"
+                                         data-price="$69,90"
+                                         data-cover="./imagens/acabaimg.jpg"
+                                         data-synopsis="Uma narrativa emocionante e corajosa sobre amor, resiliência e as difíceis escolhas para quebrar ciclos dolorosos do passado.">
+                                        <div class="cover"><img src="./imagens/acabaimg.jpg" alt="É assim que acaba"></div>
+                                        <span>$69,90</span>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-
-
-                        <!-- Botão Próximo do Carrossel -->
-                        <a class="carousel-control-next next-btn" href="#carouselFavoritos" role="button" data-slide="next">
-                            <span>&gt;</span>
-                        </a>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFavoritos" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFavoritos" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
                     </div>
                 </section>
 
@@ -119,117 +146,186 @@
 
 
             <!-- Linha 2: Em Oferta + Mangás de Romance -->
-            <div class="row">
-               
-                <!-- CARROSSEL 2: EM OFERTA -->
+            <div class="row g-3">
                 <section class="card-section pink-box flex-1">
                     <div class="section-header">
                         <h3>Em oferta</h3>
                         <a href="#" class="see-more-inline">VER MAIS &rarr;</a>
                     </div>
                    
-                    <div id="carouselOfertas" class="carousel slide" data-ride="carousel">
+                    <!-- Carrossel 2 (Em Oferta) -->
+                    <div id="carouselOfertas" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
-                           
                             <div class="carousel-item active">
-                                <div class="books-carousel">
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/imagen.jpg" alt="O Morro dos Ventos Uivantes"></div>
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="O Morro dos Ventos Uivantes"
+                                         data-author="Emily Brontë"
+                                         data-stars="5"
+                                         data-price="$65,00"
+                                         data-cover="./imagens/ventosimg.jpg"
+                                         data-synopsis="Uma história intensa e sombria de obsessão, vingança e paixão visceral ambientada nas charnecas isoladas da Inglaterra.">
+                                        <div class="cover"><img src="./imagens/ventosimg.jpg" alt="O Morro dos Ventos Uivantes"></div>
                                         <span>$65,00</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/jogandoporamor.jpg" alt="Melhor do que nos filmes"></div>
+                                    <div class="book-card"
+                                         data-title="Melhor Do Que Nos Filmes"
+                                         data-author="Lynn Painter"
+                                         data-stars="5"
+                                         data-price="$59,90"
+                                         data-cover="./imagens/mlhrimg.jpg"
+                                         data-synopsis="Uma jovem apaixonada por comédias românticas tenta criar seu próprio conto de fadas ao lado do vizinho implicante.">
+                                        <div class="cover"><img src="./imagens/mlhrimg.jpg" alt="Melhor do que nos filmes"></div>
                                         <span>$59,90</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/img.jpg" alt="É assim que acaba"></div>
+                                    <div class="book-card"
+                                         data-title="É Assim Que Acaba"
+                                         data-author="Colleen Hoover"
+                                         data-stars="5"
+                                         data-price="$69,90"
+                                         data-cover="./imagens/acabaimg.jpg"
+                                         data-synopsis="A jornada inesquecível de Lily ao lidar com um amor complexo e tomar as rédeas do próprio destino.">
+                                        <div class="cover"><img src="./imagens/acabaimg.jpg" alt="É assim que acaba"></div>
                                         <span>$69,90</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/jogandoporamor.jpg" alt="A biblioteca da meia-noite"></div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="A Biblioteca da Meia-Noite"
+                                         data-author="Matt Haig"
+                                         data-stars="5"
+                                         data-price="$59,90"
+                                         data-cover="./imagens/bibliotecaimg.jpg"
+                                         data-synopsis="Entre a vida e a morte existe uma biblioteca mágica, onde cada livro oferece a chance de experimentar vidas que poderiam ter sido vividas.">
+                                        <div class="cover"><img src="./imagens/bibliotecaimg.jpg" alt="A biblioteca da meia-noite"></div>
+                                        <span>$59,90</span>
+                                    </div>
+                                    <div class="book-card"
+                                         data-title="Orgulho e Preconceito"
+                                         data-author="Jane Austen"
+                                         data-stars="5"
+                                         data-price="$69,90"
+                                         data-cover="./imagens/orgulhoimagem.jpg"
+                                         data-synopsis="As disputas de orgulho e julgamentos equivocados que cercam a vida de Elizabeth Bennet e do altivo Sr. Darcy.">
+                                        <div class="cover"><img src="./imagens/orgulhoimagem.jpg" alt="Orgulho e Preconceito"></div>
+                                        <span>$69,90</span>
+                                    </div>
+                                    <div class="book-card"
+                                         data-title="Jogando por Amor"
+                                         data-author="S. J. Hook"
+                                         data-stars="4"
+                                         data-price="$59,90"
+                                         data-cover="./imagens/jogandoimagem.jpg"
+                                         data-synopsis="Superações no esporte e descobertas românticas em um enredo dinâmico e cativante.">
+                                        <div class="cover"><img src="./imagens/jogandoimagem.jpg" alt="Jogando por Amor"></div>
                                         <span>$59,90</span>
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="carousel-item">
-                                <div class="books-carousel">
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/imagen.jpg" alt="Livro Extra Oferta"></div>
-                                        <span>$39,90</span>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
-
-
-                        <a class="carousel-control-next next-btn" href="#carouselOfertas" role="button" data-slide="next">
-                            <span>&gt;</span>
-                        </a>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOfertas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselOfertas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
                     </div>
                 </section>
 
 
-                <!-- CARROSSEL 3: MANGÁS -->
                 <section class="card-section pink-box flex-1">
                     <div class="section-header">
                         <h3>Mangás de romance</h3>
                         <a href="#" class="see-more-inline">VER MAIS &rarr;</a>
                     </div>
                    
-                    <div id="carouselMangas" class="carousel slide" data-ride="carousel">
+                    <!-- Carrossel 3 (Mangás) -->
+                    <div id="carouselMangas" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
-                           
                             <div class="carousel-item active">
-                                <div class="books-carousel">
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/amor-teoricamente.jpg" alt="Horimiya"></div>
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="Horimiya"
+                                         data-author="HERO & Daisuke Hagiwara"
+                                         data-stars="5"
+                                         data-price="$45,00"
+                                         data-cover="./imagens/Horimiya.jpg"
+                                         data-synopsis="Duas pessoas com vidas secretas fora da escola descobrem o lado oculto uma da outra, nascendo uma doce amizade e romance.">
+                                        <div class="cover"><img src="./imagens/horymia.jpg" alt="Horimiya"></div>
                                         <span>$45,00</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/jogo-de-amor.jpg" alt="Nana"></div>
+                                    <div class="book-card"
+                                         data-title="Nana"
+                                         data-author="Ai Yazawa"
+                                         data-stars="5"
+                                         data-price="$49,90"
+                                         data-cover="./imagens/nanaimg.jpg"
+                                         data-synopsis="Duas garotas com o mesmo nome e personalidades totalmente opostas cruzam caminhos em Tóquio, dividindo sonhos, música e dilemas do amor.">
+                                        <div class="cover"><img src="./imagens/nanaimg.jpg" alt="Nana"></div>
                                         <span>$49,90</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/manga-romance-1.jpg" alt="Kamisama Kiss"></div>
+                                    <div class="book-card"
+                                         data-title="Kamisama Kiss"
+                                         data-author="Julietta Suzuki"
+                                         data-stars="4"
+                                         data-price="$68,00"
+                                         data-cover="./imagens/kissimg.jpg"
+                                         data-synopsis="Após perder sua casa, Nanami repentinamente torna-se a divindade de um templo e precisa conviver com um espírito raposa sarcástico.">
+                                        <div class="cover"><img src="./imagens/kissimg.jpg" alt="Kamisama Kiss"></div>
                                         <span>$68,00</span>
                                     </div>
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/manga-romance-2.jpg" alt="Kimi ni Todoke"></div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="Kimi ni Todoke"
+                                         data-author="Karuho Shiina"
+                                         data-stars="5"
+                                         data-price="$79,90"
+                                         data-cover="./imagens/todokeimg.jpg"
+                                         data-synopsis="Sawako é temida por parecer a personagem de um filme de terror, até que a aproximação de Kazehaya muda totalmente a sua percepção do mundo.">
+                                        <div class="cover"><img src="./imagens/todokeimg.jpg" alt="Kimi ni Todoke"></div>
                                         <span>$79,90</span>
                                     </div>
-                                </div>
-                            </div>
-
-
-                            <div class="carousel-item">
-                                <div class="books-carousel">
-                                    <div class="book-card">
-                                        <div class="cover"><img src="./imagens/manga-romance-1.jpg" alt="Mangá Extra"></div>
-                                        <span>$42,00</span>
+                                    <div class="book-card"
+                                         data-title="Horimiya - Vol 2"
+                                         data-author="HERO & Daisuke Hagiwara"
+                                         data-stars="5"
+                                         data-price="$45,00"
+                                         data-cover="./imagens/horimiya2.jpg"
+                                         data-synopsis="A continuação dos momentos leves, divertidos e sinceros entre Hori e Miyamura enquanto estreitam seus laços.">
+                                        <div class="cover"><img src="./imagens/horimiya2.jpg" alt="Horimiya Vol 2"></div>
+                                        <span>$45,00</span>
+                                    </div>
+                                    <div class="book-card"
+                                         data-title="Nana - Vol 2"
+                                         data-author="Ai Yazawa"
+                                         data-stars="5"
+                                         data-price="$49,90"
+                                         data-cover="./imagens/nana2.jpg"
+                                         data-synopsis="Novos desafios e conquistas para as duas Nanas enquanto tentam construir suas trajetórias no meio artístico e amoroso.">
+                                        <div class="cover"><img src="./imagens/nana2.jpg" alt="Nana Vol 2"></div>
+                                        <span>$49,90</span>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-
-
-                        <a class="carousel-control-next next-btn" href="#carouselMangas" role="button" data-slide="next">
-                            <span>&gt;</span>
-                        </a>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMangas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMangas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
                     </div>
                 </section>
-
-
             </div>
 
 
-            <!-- Linha 3: Romances Internacionais + Redes Sociais + Footer -->
-            <div class="row bottom-row">
+            <!-- Linha 3: Romances Internacionais + Redes Sociais + Footer da Direita -->
+            <div class="row bottom-row g-3">
                 <section class="sub-section flex-1">
                     <h4>ROMANCES INTERNACIONAIS</h4>
                     <div class="yellow-box">
@@ -271,17 +367,17 @@
             <nav class="sidebar-menu">
                 <ul>
                     <li><a href="#">Filtrar</a></li>
-                    <li><a href="#">Conta</a></li>
-                    <li><a href="#">Configurações</a></li>
-                    <li><a href="#">Formas de pagamento</a></li>
-                    <li><a href="#">Ajuda</a></li>
-                    <li><a href="#">Sair</a></li>
+                    <li><a href="#">conta</a></li>
+                    <li><a href="#">configurações</a></li>
+                    <li><a href="#">formas de pagamento</a></li>
+                    <li><a href="#">ajuda</a></li>
+                    <li><a href="#">sair</a></li>
                 </ul>
             </nav>
 
 
             <div class="sidebar-banner">
-                <img src="./imagens/sidebar-banner.jpg" alt="Bookstore Romance Day">
+                <img src="./imagens/booking.jpg" alt="Bookstore Romance Day">
             </div>
         </aside>
 
@@ -289,9 +385,30 @@
     </div>
 
 
-    <!-- Scripts do Bootstrap (Obrigatórios para o funcionamento das setas e do deslizamento) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Modal Personalizada Nativa -->
+    <div id="customModal" class="custom-modal">
+        <div class="custom-modal-content">
+            <span class="custom-close-btn">&times;</span>
+            <div class="custom-modal-body">
+                <div class="modal-left">
+                    <img id="modalBookCover" src="" alt="Capa do Livro">
+                </div>
+                <div class="modal-right">
+                    <h2 id="modalBookTitle">Título do Livro</h2>
+                    <p class="author-text">Autor: <span id="modalBookAuthor">Nome do Autor</span></p>
+                    <div id="modalBookStars" class="stars-container"></div>
+                    <h3 id="modalBookPrice" class="price-text">$00,00</h3>
+                    <h4>Sinopse:</h4>
+                    <p id="modalBookSynopsis" class="synopsis-text">Descrição do livro...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script JavaScript -->
+    <script src="./js/script.js"></script>
 </body>
 </html>
