@@ -1,4 +1,3 @@
-index.html/
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,19 +20,13 @@ index.html/
 <body>
 
 
-    <!-- Bar de Avisos / Promoção Superior -->
-    <div class="top-announcement-bar">
-        <span>✨ Frete Grátis para todo o Brasil em compras acima de R$ 120,00 | Cupom: <strong>VELVET10</strong></span>
-    </div>
-
-
     <div class="site-container">
         <main class="main-content">
            
             <!-- Header Promocional Elegante -->
             <header class="header-promocional">
                 <div class="logo-container">
-                    <img src="./imagens/logoimg.jpg.png" alt="VT Velvet Library Logo" class="logo-circulo" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=150&auto=format&fit=crop&q=80'">
+                    <img src="./imagens/logo.png" alt="VT Velvet Library Logo" class="logo-circulo" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=150&auto=format&fit=crop&q=80'">
                     <div class="brand-titles">
                         <span class="brand-subtitle">Livraria & Sebo Digital</span>
                         <h1 class="brand-title">Velvet Library</h1>
@@ -111,7 +104,7 @@ index.html/
                         <h3><i class="fa-solid fa-fire-flame-curved me-2 text-warning"></i>Favoritos dos Leitores</h3>
                     </div>
                    
-                    <div id="carouselFavoritos" class="carousel slide" data-bs-interval="false">
+                    <div id="carouselFavoritos" class="carousel slide custom-carousel" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="books-grid">
@@ -121,10 +114,10 @@ index.html/
                                          data-stars="5"
                                          data-price="R$ 59,90"
                                          data-category="romance"
-                                         data-cover="./imagens/jogandoimagem.jpg"
-                                         data-synopsis="Um romance empolgante que envolve paixão, rivalidades e superação dentro e fora dos campos. Uma história inesquecível sobre escolhas e redenção.">
+                                         data-cover="./imagens/jogando.jpg"
+                                         data-synopsis="Um romance empolgante que envolve paixão, rivalidades e superação dentro e fora dos campos.">
                                         <div class="cover">
-                                            <img src="./imagens/jogandoimagem.jpg" alt="Jogando por Amor" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&auto=format&fit=crop&q=80'">
+                                            <img src="./imagens/jogando.jpg" alt="Jogando por Amor" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&auto=format&fit=crop&q=80'">
                                             <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
                                         </div>
                                         <h4 class="book-card-title">Jogando por Amor</h4>
@@ -139,10 +132,10 @@ index.html/
                                          data-stars="5"
                                          data-price="R$ 69,90"
                                          data-category="romance de época"
-                                         data-cover="./imagens/orgulhoimagem.jpg"
-                                         data-synopsis="O clássico atemporal que acompanha as atribulações do relacionamento entre Elizabeth Bennet e Fitzwilliam Darcy na Inglaterra do século XIX.">
+                                         data-cover="./imagens/orgulho.jpg"
+                                         data-synopsis="O clássico atemporal sobre o relacionamento entre Elizabeth Bennet e Fitzwilliam Darcy.">
                                         <div class="cover">
-                                            <img src="./imagens/orgulhoimagem.jpg" alt="Orgulho e Preconceito" onerror="this.src='https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=300&auto=format&fit=crop&q=80'">
+                                            <img src="./imagens/orgulho.jpg" alt="Orgulho e Preconceito" onerror="this.src='https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=300&auto=format&fit=crop&q=80'">
                                             <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
                                         </div>
                                         <h4 class="book-card-title">Orgulho e Preconceito</h4>
@@ -157,10 +150,10 @@ index.html/
                                          data-stars="4"
                                          data-price="R$ 45,00"
                                          data-category="romance"
-                                         data-cover="./imagens/imagens.jpg"
-                                         data-synopsis="Duas mentes brilhantes da física entram em rota de colisão ao tentarem equilibrar rivalidades acadêmicas com desejos totalmente imprevisíveis.">
+                                         data-cover="./imagens/amor.jpg"
+                                         data-synopsis="Duas mentes brilhantes da física entram em rota de colisão amorosa.">
                                         <div class="cover">
-                                            <img src="./imagens/imagens.jpg" alt="Amor, Teoricamente" onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&auto=format&fit=crop&q=80'">
+                                            <img src="./imagens/amor.jpg" alt="Amor, Teoricamente" onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&auto=format&fit=crop&q=80'">
                                             <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
                                         </div>
                                         <h4 class="book-card-title">Amor, Teoricamente</h4>
@@ -169,7 +162,73 @@ index.html/
                                     </div>
                                 </div>
                             </div>
+
+
+                            <div class="carousel-item">
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="Jogo de Amor Para Dois"
+                                         data-author="Vi Keeland"
+                                         data-stars="4"
+                                         data-price="R$ 49,90"
+                                         data-category="romance"
+                                         data-cover="./imagens/paradois.jpg"
+                                         data-synopsis="Uma comédia romântica envolvente e provocante.">
+                                        <div class="cover">
+                                            <img src="./imagens/paradois.jpg" alt="Jogo de Amor Para Dois" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&auto=format&fit=crop&q=80'">
+                                            <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                        </div>
+                                        <h4 class="book-card-title">Jogo de Amor Para Dois</h4>
+                                        <p class="book-card-author">Vi Keeland</p>
+                                        <span class="price">R$ 49,90</span>
+                                    </div>
+
+
+                                    <div class="book-card"
+                                         data-title="A Hipótese do Amor"
+                                         data-author="Ali Hazelwood"
+                                         data-stars="5"
+                                         data-price="R$ 65,00"
+                                         data-category="romance"
+                                         data-cover="./imagens/hipotese.jpg"
+                                         data-synopsis="Um namoro de mentira entre cientistas com sentimentos reais.">
+                                        <div class="cover">
+                                            <img src="./imagens/hipotese.jpg" alt="A Hipótese do Amor" onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?w=300&auto=format&fit=crop&q=80'">
+                                            <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                        </div>
+                                        <h4 class="book-card-title">A Hipótese do Amor</h4>
+                                        <p class="book-card-author">Ali Hazelwood</p>
+                                        <span class="price">R$ 65,00</span>
+                                    </div>
+
+
+                                    <div class="book-card"
+                                         data-title="É Assim Que Acaba"
+                                         data-author="Colleen Hoover"
+                                         data-stars="5"
+                                         data-price="R$ 69,90"
+                                         data-category="romance"
+                                         data-cover="./imagens/éassim.jpg"
+                                         data-synopsis="Uma história emocionante sobre escolhas e resiliência.">
+                                        <div class="cover">
+                                            <img src="./imagens/éassim.jpg" alt="É assim que acaba" onerror="this.src='https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=300&auto=format&fit=crop&q=80'">
+                                            <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                        </div>
+                                        <h4 class="book-card-title">É Assim Que Acaba</h4>
+                                        <p class="book-card-author">Colleen Hoover</p>
+                                        <span class="price">R$ 69,90</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFavoritos" data-bs-slide="prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFavoritos" data-bs-slide="next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                 </section>
 
@@ -194,41 +253,53 @@ index.html/
                         <h3><i class="fa-solid fa-tag me-2 text-danger"></i>Em Oferta</h3>
                     </div>
                    
-                    <div class="books-grid">
-                        <div class="book-card"
-                             data-title="O Morro dos Ventos Uivantes"
-                             data-author="Emily Brontë"
-                             data-stars="5"
-                             data-price="R$ 65,00"
-                             data-category="romance de época"
-                             data-cover="./imagens/ventosimg.jpg"
-                             data-synopsis="Uma história intensa e sombria de obsessão, vingança e paixão visceral ambientada nas charnecas isoladas da Inglaterra.">
-                            <div class="cover">
-                                <img src="./imagens/ventosimg.jpg" alt="O Morro dos Ventos Uivantes" onerror="this.src='https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=300&auto=format&fit=crop&q=80'">
-                                <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
-                            </div>
-                            <h4 class="book-card-title">O Morro dos Ventos Uivantes</h4>
-                            <p class="book-card-author">Emily Brontë</p>
-                            <span class="price">R$ 65,00</span>
-                        </div>
+                    <div id="carouselOfertas" class="carousel slide custom-carousel" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="O Morro dos Ventos Uivantes"
+                                         data-author="Emily Brontë"
+                                         data-stars="5"
+                                         data-price="R$ 65,00"
+                                         data-category="romance de época"
+                                         data-cover="./imagens/morro.jpg"
+                                         data-synopsis="Uma história intensa e sombria de obsessão e paixão nas charnecas da Inglaterra.">
+                                        <div class="cover">
+                                            <img src="./imagens/morro.jpg" alt="O Morro dos Ventos Uivantes" onerror="this.src='https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=300&auto=format&fit=crop&q=80'">
+                                            <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                        </div>
+                                        <h4 class="book-card-title">O Morro dos Ventos Uivantes</h4>
+                                        <p class="book-card-author">Emily Brontë</p>
+                                        <span class="price">R$ 65,00</span>
+                                    </div>
 
 
-                        <div class="book-card"
-                             data-title="Melhor Do Que Nos Filmes"
-                             data-author="Lynn Painter"
-                             data-stars="5"
-                             data-price="R$ 59,90"
-                             data-category="romance escolar"
-                             data-cover="./imagens/mlhrimg.jpg"
-                             data-synopsis="Uma jovem apaixonada por comédias românticas tenta criar seu próprio conto de fadas ao lado do vizinho implicante.">
-                            <div class="cover">
-                                <img src="./imagens/mlhrimg.jpg" alt="Melhor do que nos filmes" onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?w=300&auto=format&fit=crop&q=80'">
-                                <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                    <div class="book-card"
+                                         data-title="Melhor Do Que Nos Filmes"
+                                         data-author="Lynn Painter"
+                                         data-stars="5"
+                                         data-price="R$ 59,90"
+                                         data-category="romance escolar"
+                                         data-cover="./imagens/melhordo.jpg"
+                                         data-synopsis="Uma jovem apaixonada por comédias românticas tenta viver seu próprio conto de fadas.">
+                                        <div class="cover">
+                                            <img src="./imagens/melhordo.jpg" alt="Melhor do que nos filmes" onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?w=300&auto=format&fit=crop&q=80'">
+                                            <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                        </div>
+                                        <h4 class="book-card-title">Melhor Do Que Nos Filmes</h4>
+                                        <p class="book-card-author">Lynn Painter</p>
+                                        <span class="price">R$ 59,90</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="book-card-title">Melhor Do Que Nos Filmes</h4>
-                            <p class="book-card-author">Lynn Painter</p>
-                            <span class="price">R$ 59,90</span>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOfertas" data-bs-slide="prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselOfertas" data-bs-slide="next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                 </section>
 
@@ -239,115 +310,62 @@ index.html/
                     </div>
 
 
-                    <div class="books-grid">
-                        <div class="book-card"
-                             data-title="Horimiya"
-                             data-author="HERO & Daisuke Hagiwara"
-                             data-stars="5"
-                             data-price="R$ 45,00"
-                             data-category="mangas"
-                             data-cover="./imagens/horymia.jpg"
-                             data-synopsis="Duas pessoas com vidas secretas fora da escola descobrem o lado oculto uma da outra, nascendo uma doce amizade e romance.">
-                            <div class="cover">
-                                <img src="./imagens/horymia.jpg" alt="Horimiya" onerror="this.src='https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=300&auto=format&fit=crop&q=80'">
-                                <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
-                            </div>
-                            <h4 class="book-card-title">Horimiya</h4>
-                            <p class="book-card-author">HERO & Daisuke Hagiwara</p>
-                            <span class="price">R$ 45,00</span>
-                        </div>
+                    <div id="carouselMangas" class="carousel slide custom-carousel" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="books-grid">
+                                    <div class="book-card"
+                                         data-title="Horimiya"
+                                         data-author="HERO & Daisuke Hagiwara"
+                                         data-stars="5"
+                                         data-price="R$ 45,00"
+                                         data-category="mangas"
+                                         data-cover="./imagens/hory.jpg"
+                                         data-synopsis="Duas pessoas com vidas secretas descobrem o lado oculto uma da outra.">
+                                        <div class="cover">
+                                            <img src="./imagens/hory.jpg" alt="Horimiya" onerror="this.src='https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=300&auto=format&fit=crop&q=80'">
+                                            <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                        </div>
+                                        <h4 class="book-card-title">Horimiya</h4>
+                                        <p class="book-card-author">HERO & Daisuke Hagiwara</p>
+                                        <span class="price">R$ 45,00</span>
+                                    </div>
 
 
-                        <div class="book-card"
-                             data-title="Nana"
-                             data-author="Ai Yazawa"
-                             data-stars="5"
-                             data-price="R$ 49,90"
-                             data-category="mangas"
-                             data-cover="./imagens/nanaimg.jpg"
-                             data-synopsis="Duas garotas com o mesmo nome e personalidades totalmente opostas cruzam caminhos em Tóquio, dividindo sonhos, música e dilemas do amor.">
-                            <div class="cover">
-                                <img src="./imagens/nanaimg.jpg" alt="Nana" onerror="this.src='https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&auto=format&fit=crop&q=80'">
-                                <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                    <div class="book-card"
+                                         data-title="Nana"
+                                         data-author="Ai Yazawa"
+                                         data-stars="5"
+                                         data-price="R$ 49,90"
+                                         data-category="mangas"
+                                         data-cover="./imagens/nana.jpg"
+                                         data-synopsis="Duas garotas com o mesmo nome cruzam caminhos e dividem sonhos em Tóquio.">
+                                        <div class="cover">
+                                            <img src="./imagens/nana.jpg" alt="Nana" onerror="this.src='https://images.unsplash.com/photo-1578632767115-351597cf2477?w=300&auto=format&fit=crop&q=80'">
+                                            <div class="card-overlay"><span class="btn-quick-view">Espiar Sinopse</span></div>
+                                        </div>
+                                        <h4 class="book-card-title">Nana</h4>
+                                        <p class="book-card-author">Ai Yazawa</p>
+                                        <span class="price">R$ 49,90</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="book-card-title">Nana</h4>
-                            <p class="book-card-author">Ai Yazawa</p>
-                            <span class="price">R$ 49,90</span>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMangas" data-bs-slide="prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMangas" data-bs-slide="next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                 </section>
             </div>
 
 
-            <!-- Rodapé Profissional Reestruturado -->
-            <footer class="site-footer">
-                <div class="footer-container">
-                    <div class="footer-column brand-col">
-                        <div class="footer-brand">
-                            <h4>VT Velvet Library</h4>
-                            <p>Sua livraria digital especializada em histórias que encantam e transformam leitores.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="footer-column">
-                        <h5><i class="fa-brands fa-github me-2"></i>Desenvolvido por</h5>
-                        <ul class="github-links">
-                            <li>
-                                <a href="https://github.com/isabeliguedes" target="_blank" rel="noopener noreferrer" class="dev-link">
-                                    <span class="dev-avatar">IG</span> Isabeli Guedes
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/maizarepolho" target="_blank" rel="noopener noreferrer" class="dev-link">
-                                    <span class="dev-avatar">MR</span> Maiza Repolho
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="footer-column">
-                        <h5>Navegação</h5>
-                        <ul>
-                            <li><a href="#">Sobre nós</a></li>
-                            <li><a href="#">Central de Ajuda</a></li>
-                            <li><a href="#">Fale Conosco</a></li>
-                        </ul>
-                    </div>
-
-
-                    <div class="footer-column">
-                        <h5>Políticas</h5>
-                        <ul>
-                            <li><a href="#">Termos de Uso</a></li>
-                            <li><a href="#">Política de Privacidade</a></li>
-                            <li><a href="#">Entregas e Trocas</a></li>
-                        </ul>
-                    </div>
-
-
-                    <div class="footer-column">
-                        <h5>Siga-nos</h5>
-                        <div class="social-icons">
-                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="footer-bottom">
-                    <p>&copy; 2026 VT Velvet Library. Todos os direitos reservados.</p>
-                </div>
-            </footer>
-
-
         </main>
 
 
-        <!-- Barra Lateral de Navegação -->
+        <!-- Barra Lateral -->
         <aside class="sidebar">
             <nav class="sidebar-menu">
                 <div class="sidebar-header">
@@ -375,7 +393,72 @@ index.html/
     </div>
 
 
-    <!-- Modal do Livro (Detalhes) -->
+    <!-- RODAPÉ EXPANDIDO (Fora do contentor principal para ocupar 100% da largura) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-col">
+                <div class="footer-brand">
+                    <h4>VT Velvet Library</h4>
+                    <p>Sua livraria digital especializada em histórias que encantam e transformam leitores.</p>
+                </div>
+            </div>
+
+
+            <div class="footer-column">
+                <h5><i class="fa-brands fa-github me-2"></i>Desenvolvido por</h5>
+                <ul class="github-links">
+                    <li>
+                        <a href="https://github.com/isabeliguedes" target="_blank" rel="noopener noreferrer" class="dev-link">
+                            <span class="dev-avatar">IG</span> Isabeli Guedes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/maizarepolho" target="_blank" rel="noopener noreferrer" class="dev-link">
+                            <span class="dev-avatar">MR</span> Maiza Repolho
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h5>Navegação</h5>
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h5>Políticas</h5>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Entregas e Trocas</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h5>Siga-nos</h5>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 VT Velvet Library. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- Modais -->
     <div id="customModal" class="custom-modal">
         <div class="custom-modal-content">
             <button class="custom-close-btn" aria-label="Fechar Modal">&times;</button>
@@ -410,7 +493,6 @@ index.html/
     </div>
 
 
-    <!-- Modal Entrar -->
     <div id="loginModalCustom" class="custom-modal">
         <div class="custom-modal-content form-modal-content">
             <button class="custom-close-btn close-login">&times;</button>
@@ -433,7 +515,6 @@ index.html/
     </div>
 
 
-    <!-- Modal Criar Conta -->
     <div id="registerModalCustom" class="custom-modal">
         <div class="custom-modal-content form-modal-content">
             <button class="custom-close-btn close-register">&times;</button>
@@ -460,11 +541,9 @@ index.html/
     </div>
 
 
-    <!-- Toast de Notificação -->
-    <div id="toastNotification" class="toast-notification">Notificação de teste</div>
+    <div id="toastNotification" class="toast-notification">Notificação</div>
 
 
-    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>

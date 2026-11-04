@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
 
@@ -48,7 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const author = card.getAttribute('data-author') || 'Autor Desconhecido';
             const stars = parseInt(card.getAttribute('data-stars')) || 5;
             const price = card.getAttribute('data-price') || 'R$ 0,00';
-     
+            const cover = card.getAttribute('data-cover') || '';
+            const synopsis = card.getAttribute('data-synopsis') || 'Sem sinopse disponível.';
+
+
             if (modalBookTitle) modalBookTitle.textContent = title;
             if (modalBookAuthor) modalBookAuthor.textContent = author;
             if (modalBookPrice) modalBookPrice.textContent = price;
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- MODAIS DE AUTENTICAÇÃO (LOGIN E REGISTRO) ---
+    // --- MODAIS DE AUTENTICAÇÃO (LOGIN E REGISTO) ---
     const loginModal = document.getElementById('loginModalCustom');
     const registerModal = document.getElementById('registerModalCustom');
 
@@ -148,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- BUSCA EM TEMPO REAL ---
+    // --- PESQUISA EM TEMPO REAL ---
     const searchInput = document.getElementById('searchInput');
 
 
@@ -221,5 +222,4 @@ document.addEventListener('DOMContentLoaded', () => {
             showToast('Conta criada com sucesso! Bem-vindo(a).');
         });
     }
-});       const cover = card.getAttribute('data-cover') || '';
-            const synopsis = card.getAttribute('data-synopsis') || 'Sem sinopse disponível.';
+});

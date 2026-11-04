@@ -28,21 +28,11 @@ body {
 }
 
 
-.top-announcement-bar {
-    background-color: var(--primary-velvet);
-    color: var(--white);
-    text-align: center;
-    padding: 8px 15px;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-}
-
-
 .site-container {
     display: flex;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 
@@ -52,10 +42,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 
-/* Header Promocional Elegante */
+/* Header */
 .header-promocional {
     display: flex;
     align-items: center;
@@ -104,7 +95,6 @@ body {
 }
 
 
-/* Barra de Pesquisa */
 .search-bar-container {
     flex: 1;
     max-width: 450px;
@@ -222,7 +212,7 @@ body {
 }
 
 
-/* Banner de Destaque */
+/* Banner */
 .hero-banner {
     background: linear-gradient(135deg, var(--primary-velvet) 0%, #7A1926 100%);
     color: var(--white);
@@ -251,7 +241,7 @@ body {
 }
 
 
-/* Badges de Benefícios */
+/* Benefícios */
 .store-features {
     display: flex;
     justify-content: space-around;
@@ -287,7 +277,7 @@ body {
 }
 
 
-/* Layout Seções */
+/* Grid & Structure */
 .row {
     display: flex;
     gap: 20px;
@@ -303,6 +293,7 @@ body {
     padding: 20px;
     border-radius: 16px;
     border: 1px solid #F0E6E7;
+    position: relative;
 }
 
 
@@ -315,14 +306,49 @@ body {
 }
 
 
-/* Grid de Livros */
-.books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 20px;
+/* Carrossel */
+.custom-carousel {
+    position: relative;
+    padding: 0 10px;
 }
 
 
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 10px 5px;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-velvet);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    color: var(--white);
+    font-size: 0.9rem;
+    border: 2px solid var(--white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: var(--primary-hover);
+    opacity: 1;
+}
+
+
+.carousel-control-prev { left: -15px; }
+.carousel-control-next { right: -15px; }
+
+
+/* Book Cards */
 .book-card {
     display: flex;
     flex-direction: column;
@@ -384,7 +410,7 @@ body {
 
 
 .book-card-title {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 700;
     margin-bottom: 2px;
     color: var(--text-dark);
@@ -393,7 +419,7 @@ body {
 
 
 .book-card-author {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     margin-bottom: 4px;
 }
@@ -406,7 +432,7 @@ body {
 }
 
 
-/* Pílulas de Categoria */
+/* Categorias */
 .pills {
     display: flex;
     flex-direction: column;
@@ -435,20 +461,27 @@ body {
 }
 
 
-/* Rodapé Reformulado */
+/* RODAPÉ 100% LARGURA TOTAL DA TELA */
 .site-footer {
     background-color: var(--primary-velvet);
     color: var(--white);
-    padding: 40px 30px 20px 30px;
-    border-radius: 20px;
-    margin-top: 10px;
+    padding: 45px 50px 20px 50px;
+    margin-top: 30px;
+    width: 100vw; /* Garante 100% da largura da janela */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 
 .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
-    gap: 25px;
+    gap: 30px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     padding-bottom: 30px;
 }
@@ -456,20 +489,20 @@ body {
 
 .footer-brand h4 {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
-    margin-bottom: 8px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
 
 .footer-brand p {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--soft-pink);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 
 .footer-column h5 {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     color: var(--gold-accent);
     margin-bottom: 15px;
     font-weight: 700;
@@ -490,7 +523,7 @@ body {
 .footer-column a {
     color: #E2D2D4;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     transition: color 0.2s;
 }
 
@@ -509,12 +542,12 @@ body {
 
 
 .dev-avatar {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     background: var(--accent-pink);
     color: var(--primary-velvet);
     border-radius: 50%;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 800;
     display: flex;
     align-items: center;
@@ -529,8 +562,8 @@ body {
 
 
 .social-icons a {
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     background: rgba(255,255,255,0.1);
     border-radius: 50%;
     display: flex;
@@ -547,9 +580,11 @@ body {
 
 
 .footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
     text-align: center;
     padding-top: 20px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--soft-pink);
 }
 
@@ -755,5 +790,3 @@ body {
     font-weight: 600;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
-
-
