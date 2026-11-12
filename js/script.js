@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const paymentsSidebarLink = document.getElementById('paymentsSidebarLink');
     const helpSidebarLink = document.getElementById('helpSidebarLink');
 
-    let currentSelectedBook = null;
+    
 
     // --- FUNÇÃO DE NOTIFICAÇÃO (TOAST) ---
     function showToast(message) {
@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- ABRIR MODAL DE DETALHES DO LIVRO ---
+    let currentSelectedBook = null;
     const customModal = document.getElementById('customModal');
     const closeBtn = customModal ? customModal.querySelector('.custom-close-btn') : null;
 
@@ -139,41 +140,54 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBookCover = document.getElementById('modalBookCover');
     const modalBookSynopsis = document.getElementById('modalBookSynopsis');
 
-    const bookCards = document.querySelectorAll('.book-card');
+    document.addEventListener('click', (e) => {
+        const card = e.target.closest('.book-card');
+        if (!card) return;
 
-    bookCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const title = card.getAttribute('data-title') || 'Título Indisponível';
-            const author = card.getAttribute('data-author') || 'Autor Desconhecido';
-            const stars = parseInt(card.getAttribute('data-stars')) || 5;
-            const price = card.getAttribute('data-price') || 'R$ 0,00';
-            const cover = card.getAttribute('data-cover') || '';
-            const synopsis = card.getAttribute('data-synopsis') || 'Sem sinopse disponível.';
+        const title = card.getAttribute('data-title') || 'Título Indisponível';
+        const author = card.getAttribute('data-author') || 'Autor Desconhecido';
+        const stars = parseInt(card.getAttribute('data-stars')) || 5;
+        const price = card.getAttribute('data-price') || 'R$ 0,00';
+        const cover = card.getAttribute('data-cover') || '';
+        const synopsis = card.getAttribute('data-synopsis') || 'Sem sinopse disponível.';
 
-            currentSelectedBook = { title, author, price, cover, synopsis };
+        currentSelectedBook = { title, author, price, cover, synopsis };
 
-            if (modalBookTitle) modalBookTitle.textContent = title;
-            if (modalBookAuthor) modalBookAuthor.textContent = author;
-            if (modalBookPrice) modalBookPrice.textContent = price;
-            if (modalBookCover) {
-                modalBookCover.src = cover;
-                modalBookCover.alt = title;
-            }
-            if (modalBookSynopsis) modalBookSynopsis.textContent = synopsis;
+        if (modalBookTitle) modalBookTitle.textContent = title;
+        if (modalBookAuthor) modalBookAuthor.textContent = author;
+        if (modalBookPrice) modalBookPrice.textContent = price;
+        if (modalBookCover) {
+            modalBookCover.src = cover;
+            modalBookCover.alt = title;
+            modalBookCover.style.width = '180px';
+            modalBookCover.style.height = '260px';
+            modalBookCover.style.objectFit = 'cover';
+        }
+        if (modalBookSynopsis) {
+            modalBookSynopsis.textContent = synopsis;
+            modalBookSynopsis.style.display = 'block';
+        }
 
-            if (modalBookStars) {
-                modalBookStars.innerHTML = '';
-                for (let i = 0; i < 5; i++) {
-                    if (i < stars) {
-                        modalBookStars.innerHTML += '<i class="fa-solid fa-star text-warning"></i> ';
-                    } else {
-                        modalBookStars.innerHTML += '<i class="fa-regular fa-star text-muted"></i> ';
-                    }
+        if (modalBookStars) {
+            modalBookStars.innerHTML = '';
+            for (let i = 0; i < 5; i++) {
+                if (i < stars) {
+                    modalBookStars.innerHTML += '<i class="fa-solid fa-star text-warning"></i> ';
+                } else {
+                    modalBookStars.innerHTML += '<i class="fa-regular fa-star text-muted"></i> ';
                 }
             }
+        }
 
-            if (customModal) customModal.style.display = 'flex';
-        });
+        if (customModal) {
+            const modalBody = customModal.querySelector('.custom-modal-body');
+            if (modalBody) {
+                modalBody.style.display = 'flex';
+                modalBody.style.gap = '20px';
+                modalBody.style.alignItems = 'flex-start';
+            }
+            customModal.style.display = 'flex';
+        }
     });
 
     if (closeBtn) closeBtn.addEventListener('click', () => customModal.style.display = 'none');
